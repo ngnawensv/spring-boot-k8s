@@ -24,7 +24,7 @@ public class MessageControllerTest {
     private MockMvc mockMvc;
 
     @Test
-     displayMessage_ReturnString() throws Exception {
+    void displayMessage_ReturnString() throws Exception {
         this.mockMvc
                 .perform(get("/api/v1/message"))
                 .andDo(print())
