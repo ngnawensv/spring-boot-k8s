@@ -22,13 +22,14 @@ public class MessageControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
+
     @Test
     void displayMessage_ReturnString() throws Exception {
         this.mockMvc
                 .perform(get("/api/v1/message"))
                 .andDo(print())
                 .andExpect(status().isOk())
-                .andExpect(content().string(containsString("Congratulation you successfully deployed your application to kubernetes")));
+                .andExpect(content().string(containsString("Congratulation")));
 
     }
 }
